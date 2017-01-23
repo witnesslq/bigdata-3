@@ -1,4 +1,4 @@
-package com.myhadoop.rpc;
+package com.myhadoop.baseapi.rpc;
 
 
 /**
@@ -7,9 +7,9 @@ package com.myhadoop.rpc;
  *
  */
 public interface ClientNameNodeProtocol {
-	
-	public static final long versionID = 100L;
-	
-	public String getMetaData(String path);
+
+	static final long versionID = 100L;
+
+	String getMetaData(String path);
 
 }

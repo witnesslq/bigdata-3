@@ -1,6 +1,6 @@
-package com.myhadoop.rpc.controller;
+package com.myhadoop.baseapi.rpc.controller;
 
-import com.myhadoop.rpc.ClientNameNodeProtocol;
+import com.myhadoop.baseapi.rpc.ClientNameNodeProtocol;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.ipc.RPC;
 

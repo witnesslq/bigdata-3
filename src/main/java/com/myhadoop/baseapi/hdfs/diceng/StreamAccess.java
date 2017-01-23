@@ -1,4 +1,4 @@
-package com.myhadoop.hdfs.diceng;
+package com.myhadoop.baseapi.hdfs.diceng;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -20,7 +20,7 @@ import java.net.URI;
  */
 public class StreamAccess {
 
-    FileSystem fs = null;
+    private FileSystem fs = null;
 
     @Before
     public void init() throws Exception {
@@ -113,7 +113,6 @@ public class StreamAccess {
             offset += 4096;
             if (offset > length) return;
         }
-        ;
 
         os.flush();
         os.close();

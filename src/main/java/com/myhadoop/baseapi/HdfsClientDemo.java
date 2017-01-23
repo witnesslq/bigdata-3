@@ -1,4 +1,4 @@
-package com.myhadoop;
+package com.myhadoop.baseapi;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -19,8 +19,8 @@ import java.util.Map.Entry;
  * @author
  */
 public class HdfsClientDemo {
-    FileSystem fs = null;
-    Configuration conf = null;
+    private FileSystem fs = null;
+    private Configuration conf = null;
 
     @Before
     public void init() throws Exception {

@@ -1,4 +1,4 @@
-package com.myhadoop.hdfs.ha;
+package com.myhadoop.baseapi.hdfs.ha;
 
 import java.net.URI;
 

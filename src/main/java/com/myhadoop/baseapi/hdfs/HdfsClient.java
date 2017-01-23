@@ -1,4 +1,4 @@
-package com.myhadoop.hdfs;
+package com.myhadoop.baseapi.hdfs;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import org.junit.Test;
 
 public class HdfsClient {
 
-	FileSystem fs = null;
+	private FileSystem fs = null;
 
 	@Before
 	public void init() throws Exception {
@@ -108,7 +108,7 @@ public class HdfsClient {
 	 * @throws FileNotFoundException
 	 */
 	@Test
-	public void testListFiles() throws FileNotFoundException, IllegalArgumentException, IOException {
+	public void testListFiles() throws IOException {
 
 		// 思考：为什么返回迭代器，而不是List之类的容器， 如果文件特大， 那不就崩啦！ 迭代器是每迭代一次都向服务器取一次
 		RemoteIterator<LocatedFileStatus> listFiles = fs.listFiles(new Path("/"), true);
@@ -145,7 +145,7 @@ public class HdfsClient {
 	 * @throws FileNotFoundException
 	 */
 	@Test
-	public void testListAll() throws FileNotFoundException, IllegalArgumentException, IOException {
+	public void testListAll() throws IllegalArgumentException, IOException {
 
 		FileStatus[] listStatus = fs.listStatus(new Path("/"));
 
