@@ -42,6 +42,9 @@ public class WordCountDriver {
         job.setMapperClass(WordcountMapper.class);
         job.setReducerClass(WordcountReducer.class);
 
+        // 设置Combiner提升效率
+        job.setCombinerClass(WordcountReducer.class);
+
         // 指定mapper输出数据的kv类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
